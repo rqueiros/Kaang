@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <!-- Required meta tags -->
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+        <!-- Generated title page --> 
+        <title><%=name%></title>
+                
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="libs/bootstrap/dist/css/bootstrap.min.css">
+        
+        <!-- Font Awesome -->
+        <script defer src="https://use.fontawesome.com/releases/v5.0.9/js/all.js" integrity="sha384-8iPTk2s/jMVj81dnzb/iFR2sdA7u06vHJyyLlAd4snFpCl/SnyUjRrbdJsw1pGIl" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="libs/jquery/dist/jquery.min.js"></script>
+
+        <!-- Client script -->
+        <script src="js/app.js"></script>
+        
+    </head>
+    <body>
+        <div class="container">
+            <!-- Kaang logo -->
+            <img src="img/kaang.png" class="rounded mx-auto d-block" alt="Kaang generator" title="Kaang Generator">
+            
+            <!-- Form to add and filter movies -->
+            <form id="frmMovies">
+                Title: <input id="txtTitle" name="title" type="text" maxlength="50" required>
+                Year: <input id="txtYear" name="year" type="number" min="1900" max="2018" required>
+                Genre: <select id="sltGenre" name="genre">
+                    <option value="Action">Action</option>
+                    <option value="Animation">Animation</option>
+                    <option value="Adeventure">Adventure</option>            
+                    <option value="Romance">Romance</option>
+                    <option value="Terror">Terror</option>
+                    <option value="Thriller">Thriller</option>
+                </select>
+                <input type="hidden" name="votes" value="0">
+                <input id="btnAddMovie" type="button" value="add movie">
+            </form>    
+            
+            <!-- Table to show all/filter movies -->
+            <div class="table-responsive">
+                <table id="tblMovies" class="table"></table>
+            </div>    
+        </div>
+    </body>
+</html>
